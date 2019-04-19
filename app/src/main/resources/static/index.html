@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<header>
+    <div id="appHeaderContainer" class="container-fluid text-center">
+        <h1>
+            <span class="glyphicon glyphicon-music"></span>
+            My Salsa App
+            <i class="fas fa-drum"></i>
+        </h1>
+    </div>
+</header>
+
+<body style="background-color:lemonchiffon;">
+
+    <div id="pleaseWait" class="text-center">
+        <h1>Please Wait...</h1>
+    </div>
+
+    <div id="appContainer" class="container-fluid text-center">
+
+        <!-- =======================START MAIN SCREEN======================================-->
+        <div id="mainScreenPanel" style="background-color:blue;border-radius: 20px;" class="panel panel-default">
+            <div class="panel-body">
+                <button style="border-radius: 50px;" class="btn" type="button" onclick="goToPlayList()">
+                    Play Music<br />
+                    <img src="img/maracas.png" style="width:200px;" />
+                </button>
+                <button style="border-radius: 50px;" class="btn" type="button" onclick="goToFindVideos()">
+                    Find Videos<br />
+                    <img src="img/salsa.videos.png" style="width:200px;height:200px;border-radius:50px;" />
+                </button>
+            </div>
+        </div>
+        <!-- =======================END  MAIN SCREEN======================================-->
+
+        <!-- =======================START NAV SCREEN======================================-->
+        <div id="navPanel" style="background-color:blue;border-radius: 20px;" class="panel panel-default">
+            <div class="panel-body">
+                <button style="border-radius: 30px;" class="btn" type="button" onclick="goToMainScreen()">
+                    Home<br />
+                    <i class="fas fa-drum fa-4x"></i>
+                </button>
+                <button style="border-radius: 30px;" class="btn" type="button" onclick="goToPlayList()">
+                    Play Music<br />
+                    <img src="img/maracas.png" style="width:50px;" />
+                </button>
+                <button style="border-radius: 30px;" class="btn" type="button" onclick="goToFindVideos()">
+                    Find Videos<br />
+                    <img src="img/salsa.videos.png" style="width:50px;height:50px;border-radius:20px;" />
+                </button>
+            </div>
+        </div>
+        <!-- =======================END  NAV SCREEN======================================-->
+
+        <audio id="songPlayer" style="display:none;" src="music/test.mp3" controls>Player Not Supported</audio>
+
+        <!-- =======================START PLAY MUSIC SCREEN================================-->
+        <div id="playListPanel" style="background-color:blue;border-radius: 20px;" class="panel panel-default">
+            <div id="playList" class="panel-body">
+                <div class="row">
+                    <button style="border-radius: 50px;" class="btn pull-left" type="button">
+                        <h4>
+                            <img src="img/maracas.png" style="width:60px;" />
+                            Play Music</h4>
+                    </button>
+                </div>
+                <div class="row">
+                    <button style="border-radius: 50px;" class="btn pull-left" type="button">
+                        <h4>
+                            <img src="img/maracas.png" style="width:60px;" />
+                            Play Music</h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- =======================END   PLAY MUSIC SCREEN================================-->
+
+
+
+        <!-- =======================START FOOTER    ======================================-->
+        <div style="background-color:blue;border-radius: 20px;" class="panel panel-default">
+            <div class="panel-body">
+                <h4 style="color:white">
+                    <span class="glyphicon glyphicon-music"></span>
+                    My Salsa App (c) Eli Corrales 2019
+                    <i class="fas fa-drum"></i>
+                </h4>
+            </div>
+        </div>
+        <!-- =======================END  FOOTER     ======================================-->
+
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/app.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/playlist.js"></script>
+
+</html>
